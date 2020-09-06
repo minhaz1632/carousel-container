@@ -1,0 +1,53 @@
+body {
+  padding: 2rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+}
+
+.modes {
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  margin-bottom: 0.5rem;
+}
+
+.prev-enter .btn,
+.next-enter .btn {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.next-enter .btn {
+  opacity: 0;
+  /* transform: translateX(-100%); */
+  transform: translateX(100%);
+}
+.prev-enter-active .btn,
+.next-enter-active .btn {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.prev-exit .btn,
+.next-exit .btn {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.prev-exit-active .btn {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.next-exit-active .btn {
+  opacity: 0;
+  /* transform: translateX(100%); */
+  transform: translateX(-100%);
+}
+.prev-enter-active .btn,
+.next-enter-active .btn,
+.prev-exit-active .btn,
+.next-exit-active .btn {
+  transition: opacity 500ms, transform 500ms;
+}
